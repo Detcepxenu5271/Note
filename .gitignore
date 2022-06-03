@@ -1,0 +1,8 @@
+# don't ignore the local image host
+#/img/
+
+# temporary files
+/0-Inbox/rename.bat
+
+# private folders
+/7-个人向/72-个人发展/721-个人会议/
