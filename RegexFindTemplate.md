@@ -19,5 +19,5 @@ Add to "Where" (Exclude some files):
 - [ ] test1-todo
 - [ ] 
 ```text
-[*-+] \[[ X]\]
+[-+*] \[[ X]\]
 ```
