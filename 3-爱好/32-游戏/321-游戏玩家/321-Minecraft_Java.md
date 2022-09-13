@@ -49,3 +49,6 @@ trashslot：垃圾桶
 VeinMiner：连锁采矿
 Waila：高亮信息拓展
 WailaHarvestability：同上
+
+## 开服
+[我的世界Minecraft开服保姆级教程](https://zhuanlan.zhihu.com/p/335079845)

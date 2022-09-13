@@ -11,7 +11,7 @@ Add to "Where" (Exclude some files):
 \#Tag
 
 ```text
-^\\#
+\\#
 ```
 
 ## TODO
@@ -21,3 +21,4 @@ Add to "Where" (Exclude some files):
 ```text
 [-+*] \[[ X]\]
 ```
+Note: case sensitive

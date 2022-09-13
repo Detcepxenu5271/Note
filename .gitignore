@@ -1,6 +1,9 @@
 # don't ignore the local image host
 #/img/
 
+# Inbox (waiting for filing)
+/0-Inbox/
+
 # temporary files
 /0-Inbox/rename.bat
 
