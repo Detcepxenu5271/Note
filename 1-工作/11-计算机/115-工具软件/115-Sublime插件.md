@@ -1,8 +1,18 @@
 # Sublime插件
 
 
+## !自己写插件
+[API Reference](https://www.sublimetext.com/docs/api_reference.html)
+
+### 技巧
+在 Sublime 的 Console 使用`sublime.log_command()`命令，Console 会显示命令内容（对命令进行 log）
+
+查看官方文档（API Reference）中的 Example Plugins：`View Package File -> Default/xxx.py`
+
+\#MARK 神奇！Sublime 的 Console 实际上是内置的 Python 解释器（交互命令行）
+
 ## Markdown Editing
-### 一、简介
+### 简介
 优点
 1. 提供了更好的语法高亮，特点是支持的格式多，且用于格式定义的元字符被淡化，突出内容
 2. 提供了便于编辑的快捷键和命令
@@ -34,3 +44,13 @@
 `U`：撤销整行的操作
 
 `Ctrl+r`：恢复，撤销“撤销操作”
+
+## SFTP
+### 通过密钥连接
+SFTP 插件使用 Pageant 的 .ppk 密钥。如果想要通过密钥连接，除了在 SFTP 的设置文件中指定 .ppk 文件的路径，还需要在 Windows 系统上运行 PuTTY 的 Pageant 服务（添加环境变量后，可以通过命令 pageant 快速启动）
+
+## BracketHighlighter
+### 括号高亮样式
+在设置文件的`user_bracket_styles`中修改。
+
+使用自定义颜色的方式：[Example: Specifying Custom Colors in Schemes](https://facelessuser.github.io/BracketHighlighter/customize/#example-specifying-custom-colors-in-schemes)

@@ -26,6 +26,13 @@ sudo systemctl start docker # 启动Docker服务
 ## 基础操作
 参考资料：[Docker基本操作](https://blog.csdn.net/m0_37714245/article/details/81713477)
 
+docker 的启动与停止
+* 启动：`systemctl start docker`
+* 停止：`systemctl stop docker`
+* 重启：`systemctl restart docker`
+* 查看状态：`systemctl status docker`
+* 开机启动：`systemctl enable docker`
+
 镜像（image）
 * 列出镜像：`docker image ls -a`
 * 【？】拉取镜像：`docker image pull library/hello-world`

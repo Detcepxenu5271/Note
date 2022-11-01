@@ -1,6 +1,10 @@
 # VSCode
 
 
+## 插件
+### Markdown 相关
+好文章：[第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈](https://blog.orangex4.cool/post/lesson-zero-6/)
+
 ## 杂项
 ### Portable Mode
 [官方文档](https://code.visualstudio.com/docs/editor/portable)
