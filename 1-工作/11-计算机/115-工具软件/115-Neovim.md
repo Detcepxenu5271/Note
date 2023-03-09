@@ -20,6 +20,7 @@ sudo apt-get install neovim
 
 #### 插件
 使用 Packer 管理插件
+* 安装 Packer：`git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
 * 首先修改相应配置文件
 * 在 nvim 里输入命令`:PackerSync`安装，`:PackerClean`卸载
 

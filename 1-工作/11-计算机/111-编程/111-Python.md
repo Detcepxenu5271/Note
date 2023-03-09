@@ -1,6 +1,18 @@
 # Python
 
 
+## 面向对象
+### 类中的变量
+* 类属性或类变量
+    - 类体中、所有函数之外定义的变量
+    - 类似 C++ 的静态变量
+* 实例属性或实例变量
+    - 类体中，所有函数内部，以 `self.变量名` 的方式定义的变量
+    - 类似 C++ 的成员变量
+* 局部变量
+    - 类体中，所有函数内部，以 `变量名=变量值` 的方式定义的变量
+    - 类似 C++ 的局部变量
+
 ## I/O
 ### 格式化
 格式化有三种方法：%，format 和 f-string
@@ -43,6 +55,25 @@
 GUI 库，开发桌面程序
 
 [中文教程](https://maicss.gitbook.io/pyqt-chinese-tutoral/)
+
+#### 介绍
+#### Hello World
+三个步骤
+* `app = QApplication(sys.argv)`，创建应用
+* 创建基本窗口对象（QWidget，QMainWindow），然后进行相关设置和后续操作
+* `sys.exec(app.exec_())`，退出应用
+
+`xxx.triggered.connect(函数)`
+* xxx 是 QAction 实例
+* 触发 xxx 时，会调用传入的函数，可以自定义
+* 除了 triggered 还有其他的行为，例如 clicked
+
+#### 菜单和工具栏
+菜单
+* menubar：菜单的条，第一次调用创建新的对象，之后只返回已有的
+    - menubar 通过 `xxx.menubar()` 调用，xxx 是 QWidget，QMainWindow 等类型的对象
+* menu：菜单项，能展开，可以嵌套
+* action：菜单中的具体选项，执行某个操作
 
 ### matplotlib
 2D 绘图库，数据可视化

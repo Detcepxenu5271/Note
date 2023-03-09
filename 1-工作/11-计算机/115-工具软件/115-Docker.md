@@ -43,9 +43,10 @@ docker 的启动与停止
 
 容器（container）
 * 创建容器：`docker run [选项] 镜像名 [向容器中传入的命令]`
-	- `-it`，i 表示交互模式，t 表示进入终端
+	- `-itd`，i 表示交互模式，t 表示进入终端，d 表示后台运行容器，并返回容器ID
 	- `--name 容器名称`：指定容器名称
 	- `-v 本地目录:容器目录`：将本地目录挂载到容器中
+	- `-p 主机端口:容器端口`：将容器的端口绑定到主机的端口上（可以实现远程连接直接连接 docker 容器）
 * 进入已运行的容器：`docker exec -it 容器名或容器id 进入后执行的第一个命令`
 	- 第一个命令：如`bash`
 * 查看容器：`docker container ls [--all]`
@@ -59,3 +60,28 @@ docker 的启动与停止
 * 将容器保存为镜像：`docker commit 容器名 镜像名`
 * 将镜像保存为文件：`docker save -o 保存的文件名 镜像名`
 * 加载镜像：`docker load -i 文件名`或`docker load < 文件名`
+
+## 直接远程连接到 Docker
+参考教程：[【docker】VScode连接远程服务器上的docker容器并使用jupyterlab](https://blog.csdn.net/u011119817/article/details/115966917)
+参考教程2：[Docker学习之SSH连接docker容器](https://cloud.tencent.com/developer/article/1550935)
+
+注意：应该按照教程 2 修改 sshd_config 文件，然后重启服务应该用教程 1 中的 `/etc/init.d/ssh restart`
+
+注：约定自己所用远程服务器，用来连接 docker 的端口号为 8080 到 8089
+
+容器中原来没有 ssh，新安装的可能找不到 sshd 服务：[解决更新ssh后在/etc/init.d下无sshd的问题](https://www.cnblogs.com/ninicwang/p/10512155.html)
+
+## 我的 Docker 容器
+### julycf
+July 的 Codefield
+
+image：ubuntu
+
+安装如下内容：
+* openssh-server, openssh-client, ssh
+* software-properties-common (PPA)
+* nvim
+* gcc, g++, cmake
+* git
+* opencv（自己编译）
+* vscode-server（VSC 自己安装）

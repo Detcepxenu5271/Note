@@ -247,3 +247,63 @@ Scroll View
 有用的组件
 * Content Size Fitter
 * Horizontal Layout Group，Vertical Layout Group，Grid Layout Group
+
+## 一些自己的理解
+### 关于游戏物体和脚本对象
+GameObject 是一个 Unity 自带的类，在 Scene 中的各个对象都是 GameObject 的实例
+
+GameObject 下的各个 Component 都属于其相应的类（如 Rigidbody2D）
+
+脚本文件是 Asset（资源），就像预制件一样
+
+当游戏运行时，每个实例化的 GameObject 下挂载的脚本也会产生一个脚本所定义的类的实例化
+
+### 单例类和静态类
+使用场景：在调用其他类的函数时（例如自己实现一个通用的数学计算类）
+
+静态：直接把函数/变量设为 static
+
+单例：
+```c#
+// A.cs
+public class A: MonoBehaviour {
+	public static A instance; // static关键字。 单例模式 
+
+	//使用Awake()确保单例模式在使用前（Start前）已被初始化
+	void Awake(){
+		instance = this;
+	}
+	
+	//属性或者方法需要时public的
+	public int name;
+	public void setName(){
+		//...
+	}
+}
+
+// 使用时：
+A.instance.name="July";	//访问属性
+A.instance.setName("July");	//访问方法
+```
+
+讲何时用单例、何时用静态：[Unity3D - 单例模式和静态类](https://blog.csdn.net/xmousez/article/details/53897946)
+* 总结：最主要的一点是，如果类中有需要被修改的参数，特别是可以在 Unity 的 Inspector 中调整的，就用单例
+
+## 杂项
+### External Tools
+Sublime 的 Args：`$(ProjectPath) $(File):$(Line):$(Column)`
+
+VSCode 的补全问题
+* 最终解决的参考：[解决VSCode无法显示Unity代码提示的真正解决办法](https://blog.csdn.net/cbaili/article/details/110157060)
+
+### UI
+Pivot（轴心）：旋转、大小、缩放所围绕的点
+Anchors（锚点）：锚定到父对象上
+PosX 和 PosY：轴心相对锚点的位置
+
+新版 Text 的组件名：TextMeshProUGUI
+* 注：需要 using TMPro
+
+### JSON
+litjson 库（目前电脑里有一份，在 Ball Tracking Game 里）
+* 好教程：[LitJson官方示例（文档翻译）](https://blog.csdn.net/yjy99yjy999/article/details/116807370)

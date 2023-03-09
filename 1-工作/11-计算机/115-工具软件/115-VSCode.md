@@ -34,3 +34,6 @@ Windows / Linux 版
   - `Ctrl+K, Ctrl+K` 选择到锚点（自动取消）
   - `Esc` 取消锚点
 * Split View（Editor）：建议鼠标
+
+### 配置
+`files.exclude`：使用的是“glob patterns”在配置里的模式，路径以工作区的根目录为当前路径。例如 `backup` 只匹配根目录下的同名文件/文件夹。而在 search view 中，glob patterns 默认带有 `**/` 前缀，即匹配所有同名文件/文件夹

@@ -29,6 +29,15 @@ Sublime Text 4
 * 关键插件
 	1. Markdown Editing
 
+Visual Studio Code
+* 关键插件
+    1. Markdown All in One
+
+备注
+1. 无序列表
+    - 在使用 Sublime 的 Markdown Editing 插件时，无序列表使用“*，-，+”循环的方式，也就是一级列表用`*`，二级用`-`，以此类推
+    - 在使用 VSCode 的 Markdown All in One 插件时，无序列表只用`-`
+
 ### 3.2 内容查看与导出
 Typora (with Pandoc)
 

@@ -10,9 +10,8 @@ VMWare 版本：16.2.3 build-19376536
 Ubuntu 版本：Ubuntu 22.04 LTS
 
 内存 4096 MB，硬盘 30 GB，处理器数量为 2，每个处理器内核数量为 2
-* \#TODO 考虑加内存？
 
-## 课程笔记
+## 课堂笔记
 ### 教学大纲
 课程目的：使学生熟悉 Linux 操作系统的安装、使用和管理，Linux 的文件、进程概念，以及 I/O 重定向，Linux 下的桌面系统以及各种工具软件的使用，shell 程序设计。
 
@@ -274,8 +273,6 @@ test 命令：`test expression`或`[ expression ]`
 
 ### ch9 系统程序设计
 #### Linux 环境下函数的使用
-
-
 #### 文件和目录操作
 #### 进程控制
 #### 进程通信
@@ -449,7 +446,6 @@ test 命令：`test expression`或`[ expression ]`
 * `<Ctrl-Z>`：暂停当前命令（放到 bg，可以用 fg 唤起）
 
 ## TODO
-\#TODO
 1. Linux 文件链接
 
 ## 遇到的问题

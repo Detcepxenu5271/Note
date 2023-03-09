@@ -5,7 +5,7 @@
 [API Reference](https://www.sublimetext.com/docs/api_reference.html)
 
 ### 技巧
-在 Sublime 的 Console 使用`sublime.log_command()`命令，Console 会显示命令内容（对命令进行 log）
+在 Sublime 的 Console 使用`sublime.log_commands()`命令，Console 会显示命令内容（对命令进行 log）
 
 查看官方文档（API Reference）中的 Example Plugins：`View Package File -> Default/xxx.py`
 
