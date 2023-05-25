@@ -18,3 +18,6 @@ env
 * 创建环境：`conda create --name <env_name> <package_names>`
 	- 如 `conda create --name OpenCV python=3.8`
 * 切换环境：`conda activate <env_name>`
+
+### 从命令行打开 Anaconda 的命令
+`powershell -ExecutionPolicy ByPass -NoExit -Command "& 'E:\Environment\miniconda3\shell\condabin\conda-hook.ps1' ; conda activate 'E:\Environment\miniconda3' ; conda activate OpenCV"`

@@ -52,3 +52,6 @@ WailaHarvestability：同上
 
 ## 开服
 [我的世界Minecraft开服保姆级教程](https://zhuanlan.zhihu.com/p/335079845)
+
+注意
+* 要开启 25565 端口

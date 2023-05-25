@@ -1,4 +1,4 @@
-# Lex
+# Lex & Yacc
 
 
 ## 杂项
@@ -18,3 +18,19 @@ Lex 对没有匹配到的字符会原样输出，所以如果想要忽略未匹�
 [0-9]+\.[0-9]+
 ```
 当匹配 `0.45` 时，由于规则 2 匹配的长度更长，最终做的操作是按规则 2 的来
+
+### Yacc 的 Midrule
+```yacc
+FuncDef
+    : VOID IDENT '(' ')' {globalSymbolTable.AddFuncSymbol(*$2, 0);} Block {
+        auto ast = new FuncDefAST();
+        ast->funcType = 0;
+        ast->ident = *unique_ptr<string>($2);
+        ast->funcFParams = nullptr;
+        ast->block = unique_ptr<BaseAST>($6); // 注意 Block 是 $6，因为 Midrule 也占一个返回值
+
+        isGlobal = true;
+        
+        $$ = ast;
+    }
+```

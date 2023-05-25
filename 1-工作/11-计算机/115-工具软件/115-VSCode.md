@@ -1,11 +1,29 @@
 # VSCode
 
 
-## 插件
+## 设置（Settings）
+Windows 默认字体设置：`Consolas, 'Courier New,' monospace`
+
+## 工作区（Workspace）
+### 工作区的插件
+单独为工作区设置插件的禁用和启用
+* 该信息存储的位置在 local storage cache 中
+    [Ability to enable extensions only on specific workspaces #15611](https:/https://github.com/microsoft/vscode/issues/15611/)
+    ![存储位置](../../../img/2023-04-01-23-09-01.png)
+
+## 插件（Extension）
 ### Markdown 相关
 好文章：[第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈](https://blog.orangex4.cool/post/lesson-zero-6/)
 
+[](https://www.cnblogs.com/YunyaSir/p/15523927.html)
+
+### VScode Neovim
+建议少用 VScode 里的命令模式（可能会出现卡死的 BUG）
+
 ## 杂项
+### 字体
+backup：`"editor.fontFamily": "Consolas, 'Courier New', monospace"`
+
 ### Portable Mode
 [官方文档](https://code.visualstudio.com/docs/editor/portable)
 
@@ -30,9 +48,9 @@ Windows / Linux 版
 
 补充
 * Anchor 的用法
-  - `Ctrl+K, Ctrl+B` 设置锚点
-  - `Ctrl+K, Ctrl+K` 选择到锚点（自动取消）
-  - `Esc` 取消锚点
+    - `Ctrl+K, Ctrl+B` 设置锚点
+    - `Ctrl+K, Ctrl+K` 选择到锚点（自动取消）
+    - `Esc` 取消锚点
 * Split View（Editor）：建议鼠标
 
 ### 配置

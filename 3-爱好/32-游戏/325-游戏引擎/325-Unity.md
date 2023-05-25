@@ -1,7 +1,34 @@
 # Unity
 
 
+## 个人约定
+### UI 对象命名
+UI 对象（游戏物体）：统一在名称前加 `XXX-`，其中 XXX 是表示 UI 种类的缩写
+* IM：Image
+* TX：Text - TextMeshPro
+* PN：Panel
+* TG：Toggle
+* SL：Slider
+* SB：Scrollbar
+* SV：Scroll View
+* BT：Button - TextMeshPro
+* DD：Dropdown - TextMeshPro
+* IF：Input Field - TextMeshPro
+* CV：Canvas
+
+## 坑点
+### UGUI 组件的 On Value Changed 事件不能选择参数
+在选择方法时，有两组方法：下面的是 Static Parameters，传入静态参数；上面的才能动态传入参数
+
+![](../../../img/2023-05-09-23-11-13.png)
+
+### UI 显示顺序
+UI 遮挡顺序好像和 Hierarchy 中的上下顺序有关
+
 ## 未分类
+### 生命周期函数
+`Start()`：即使物体在游戏启动时处于 Disable，Enable 时也会调用一次，不过之后再次 Enable 就不会了
+
 ### 获取对象
 `transform.GetComponent<>()` 和 `transform.gameObject.GetComponent<>()` 好像都行
 
@@ -40,6 +67,8 @@ AddForce 的 mode 参数
 * 这个插件包含了文件读写的部分，不需要自己实现；而 LitJson 包含了内置数据类型（JsonData）和字符串的转换，文件读写需要自己做
 
 ### 使用中文
+[Unity 中 创建 TextMeshPro 中文字体（含常见汉字 TXT 文件）](https://blog.csdn.net/qq_37454669/article/details/121128100)
+
 ### 使用协程
 > 协程就像一个函数，能够暂停执行并将控制权返还给 Unity，然后在指定的时间继续执行。
 > 协程本质上是一个用返回类型 IEnumerator 声明的函数，并在主体中的某个位置包含 yield return 语句。

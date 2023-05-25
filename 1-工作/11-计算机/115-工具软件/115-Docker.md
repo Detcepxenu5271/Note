@@ -71,6 +71,16 @@ docker 的启动与停止
 
 容器中原来没有 ssh，新安装的可能找不到 sshd 服务：[解决更新ssh后在/etc/init.d下无sshd的问题](https://www.cnblogs.com/ninicwang/p/10512155.html)
 
+## 镜像加速器
+> sudo mkdir -p /etc/docker
+> sudo tee /etc/docker/daemon.json <<-'EOF'
+> {
+>   "registry-mirrors": ["https://d1naqwca.mirror.aliyuncs.com"]
+> }
+> EOF
+> sudo systemctl daemon-reload
+> sudo systemctl restart docker
+
 ## 我的 Docker 容器
 ### julycf
 July 的 Codefield
