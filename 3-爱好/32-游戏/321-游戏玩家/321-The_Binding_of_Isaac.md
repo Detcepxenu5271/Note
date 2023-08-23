@@ -2,6 +2,8 @@
 
 
 ## Mod 制作
+[API 文档](https://wofsauge.github.io/IsaacDocs/rep/index.html)
+
 ### Lua 基础
 （一些可以注意的地方）
 

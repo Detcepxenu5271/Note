@@ -20,6 +20,10 @@ Windows 默认字体设置：`Consolas, 'Courier New,' monospace`
 ### VScode Neovim
 建议少用 VScode 里的命令模式（可能会出现卡死的 BUG）
 
+### Vim
+#### 有用的命令
+hover: gh
+
 ## 杂项
 ### 字体
 backup：`"editor.fontFamily": "Consolas, 'Courier New', monospace"`

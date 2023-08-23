@@ -2,6 +2,11 @@
 
 
 ## 环境
+### Python 安装
+Python3.10 通过 pip 安装 OpenCV
+
+`import cv2`, 出现报错 `ImportError: DLL load failed while importing cv2: 找不到指定的模块。` 的解决方法: 手动下载对应 Python 版本的 whl 包 (可以从 [清华源](https://pypi.tuna.tsinghua.edu.cn/simple/opencv-python/) 下载), 使用 `pip install 文件名` 安装
+
 ### Windows 下 MinGW 编译 OpenCV 源代码
 为什么要手动编译？
 > Q: 想问下为什么在windows环境下不使用官方预编译好的opencv
