@@ -11,6 +11,14 @@ Windows 默认字体设置：`Consolas, 'Courier New,' monospace`
     [Ability to enable extensions only on specific workspaces #15611](https:/https://github.com/microsoft/vscode/issues/15611/)
     ![存储位置](../../../img/2023-04-01-23-09-01.png)
 
+## 调试
+### 查看数组变量
+方法一
+`*(int(*)[10])arr_name`
+
+方法二
+`*arr_name@10`
+
 ## 插件（Extension）
 ### Markdown 相关
 好文章：[第 6 期、写作：基于 VS Code 的 Markdown 写作技术栈](https://blog.orangex4.cool/post/lesson-zero-6/)
@@ -23,6 +31,9 @@ Windows 默认字体设置：`Consolas, 'Courier New,' monospace`
 ### Vim
 #### 有用的命令
 hover: gh
+
+#### Bug
+在使用 Profile 功能时, 有时会出现 vim 插件的 key-bindings 失效 (如 jk), Reload Window 可以解决
 
 ## 杂项
 ### 字体

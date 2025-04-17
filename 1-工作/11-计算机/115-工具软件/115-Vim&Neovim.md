@@ -45,6 +45,29 @@ sudo apt-get install neovim
     autocmd VimLeave * !D:\\im-select\\im-select.exe 2052
     ```
 
+## 配置 Vim
+### 自定义命令
+\#自定义命令 \#command
+
+#### 参数
+参数数量
+
+在命令中使用参数 (指定参数位置)
+* `<args>`
+* `<q-args>` 把特殊字符转义, 例如 " -> \"
+* `<f-args>` 转换为适合函数调用的格式
+
+#### 元字符
+expand
+* `h expand` 可以查询
+
+用来表示文件名
+* `%` 当前文件
+* `#` alternate 文件
+
+可以加 Modifier, 如 `%:r`
+* `:r` root, 去除一个扩展名
+
 ## 杂项
 ### 命令行参数
 在打开 vim 时执行命令
@@ -86,3 +109,24 @@ o[nore]map     |  -   |  -  |  -  |  -  |  -  | yes |  -   |  -   |
 t[nore]map     |  -   |  -  |  -  |  -  |  -  |  -  | yes  |  -   |
 l[nore]map     |  -   | yes | yes |  -  |  -  |  -  |  -   | yes  |
 ```
+
+### 缓冲区 buffer
+新建缓冲区的方法
+* new 新建空缓冲区, 在新窗口
+* enew 新建空缓冲区, 在当前窗口, 当前文件要先保存 (可以用 ! 丢弃当前文件的修改)
+* edit: 编辑指定文件/新建文件
+
+关闭窗口, 但是保留缓冲区
+* close
+* CTRL-W c
+
+修改缓冲区文件名, 但不保存文件
+* file <文件名>
+
+### 显示特定行
+可以用 global 命令, 匹配符合的行, 执行 `#` 命令 (print 当前行, 带行号)
+
+这种方法可以用来显示 Markdown 大纲
+
+示例: `:global/^#/#`
+
